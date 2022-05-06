@@ -9,6 +9,16 @@ import Login from '../Login/Login';
 function App() {
   const [token, setToken] = React.useState();
 
+  if(!token){
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Login setToken={setToken} />
+        </header>
+      </div>
+    );
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
